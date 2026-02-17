@@ -5,11 +5,11 @@ const BackButton = () => {
   return (
     <Link
       to="/" // Correct path here
-      className="flex items-center sub-color-1 hover:underline"
-      aria-label="Back to Home"
+      className="flex items-center sub-color-1 hover:underline ms-2 mt-2"
+      aria-label="Home"
     >
       <HiOutlineBackward className="mr-2" size={20} /> 
-      Back to Home
+      Back
     </Link>
   );
 };
