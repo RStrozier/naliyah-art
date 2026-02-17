@@ -7,7 +7,7 @@ const RandomArtPage = () => {
   return (
     <>
       <BackButton />
-      <div className="text-center text-3xl font-bold my-4 sub-color-2">Random</div>
+      <div className="text-center text-3xl font-bold my-4 sub-color-2 playwrite-nz-basic">Random</div>
       <div className="flex flex-wrap justify-center items-center gap-6 p-4">
         <img
           src={nayRandom2}

@@ -4,7 +4,7 @@ const About = () => {
   return (
    <>
    <div className="main-container mt-4 p-3">
-    <div className="sub-color-1 sm:mx-4 md:mx-6 p-2 py-4">
+    <div className="sub-color-1 sm:mx-4 md:mx-6 p-2 py-4 montserrat-write">
        <FaRegGrinHearts size={26} 
        className="mb-2"
        color="darkblue"/>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion"; // Import Framer Motion
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -34,7 +35,7 @@ const PortfolioCards = () => {
       description:
         "Whether writing poems, designing shoes, or building legos. There is no shortage of art.",
     },
-     {
+    {
       path: "/henna",
       title: "Henna",
       image: nayHenna1,
@@ -52,65 +53,103 @@ const PortfolioCards = () => {
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-2">
         {portfolioItems.map((item, index) => (
-          <Card
+          <motion.div
             key={index}
-            sx={{
-              width: "100%",
-              maxWidth: 400,
-              height: 520, // Set a fixed height for the card
-              margin: "auto",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              boxShadow: 3,
+            whileHover={{
+              scale: 1.05, // Slightly scale up the card
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)", // Add shadow on hover
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
             }}
           >
-            <CardActionArea component={Link} to={item.path} sx={{ flexGrow: 1 }}>
-              <CardMedia
-                component="img"
-                image={item.image}
-                sx={{
-                  height: 250, // Set a fixed height for the image
-                  objectFit: "cover", // Crop the image to fit the area
-                }}
-                alt={item.title}
-              />
-              <CardContent
-                sx={{
-                  flexGrow: 1, // Allows the content to grow and fill available space
-                  overflow: "hidden", // Prevents content overflow
-                }}
-              >
-                <Typography gutterBottom variant="h5" component="div">
-                  {item.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  <div className="sub-color-2">Explore the beauty of {item.title}.</div>
-                  <br />
-                  <div className="sub-color-1 mx-2">{item.description}</div>
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
+            <Card
               sx={{
-                justifyContent: "center",
-                padding: "16px",
+                width: "100%",
+                maxWidth: 400,
+                height: 560, // Set a fixed height for the card
+                margin: "auto",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                boxShadow: 3,
               }}
             >
-              <Button
-                component={Link}
-                to={item.path}
-                size="large"
-                className="main-gradient"
+              <CardActionArea component={Link} to={item.path} sx={{ flexGrow: 1 }}>
+                <CardMedia
+                  component="img"
+                  image={item.image}
+                  sx={{
+                    height: 250, // Set a fixed height for the image
+                    objectFit: "cover", // Crop the image to fit the area
+                  }}
+                  alt={item.title}
+                />
+                <CardContent
+                  sx={{
+                    flexGrow: 1, // Allows the content to grow and fill available space
+                    overflow: "hidden", // Prevents content overflow
+                  }}
+                >
+                  <Typography gutterBottom variant="h4" component="div">
+                    <div className="montserrat-normal sub-color-1">{item.title}</div>
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    <div className="sub-color-2">
+                      Explore the beauty of {item.title}.
+                    </div>
+                    <br />
+                    <div className="sub-color-1 mx-2 montserrat-write">
+                      {item.description}
+                    </div>
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions
+                sx={{
+                  justifyContent: "center",
+                  padding: "16px",
+                }}
               >
-                <div className="p-3 font-semibold sub-color-1">
-                  View {item.title} Portfolio
-                </div>
-              </Button>
-            </CardActions>
-          </Card>
+                {/* Button with Framer Motion hover effect */}
+                <motion.div
+                  whileHover={{
+                    scale: 1.1, // Slightly enlarge the button
+                    boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.2)", // Add shadow
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 15,
+                  }}
+                  style={{ borderRadius: "8px", overflow: "hidden" }} // Ensure smooth border radius
+                >
+                  <Button
+                    component={Link}
+                    to={item.path}
+                    size="large"
+                    className="main-gradient" // Restored your gradient class
+                    style={{
+                      padding: "12px 24px",
+                      fontSize: "16px",
+                      fontWeight: "semibold",
+                      borderRadius: "8px",
+                    }}
+                  >
+                    <div className="font-semibold sub-color-1">
+                      View {item.title} Portfolio
+                    </div>
+                  </Button>
+                </motion.div>
+              </CardActions>
+            </Card>
+          </motion.div>
         ))}
       </div>
+      <br />
+      <br />
     </div>
   );
 };

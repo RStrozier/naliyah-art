@@ -16,6 +16,9 @@ function HomePage() {
         alt="Check Out Naliyah's Creative Portfolio" />
       </div>
       <PortfolioCards />
+      <br />
+      <br />
+      <div className="my-2 sub-color-2 text-xs">Designed by ReGenesis Digital. All rights reserved.</div>
     </>
   )
 }

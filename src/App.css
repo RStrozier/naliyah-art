@@ -39,3 +39,33 @@ background: linear-gradient(90deg, rgba(252, 229, 230, 1) 100%, rgba(255, 252, 2
   background: #FCE5E6;
   background: linear-gradient(165deg, rgba(255, 252, 246, 1) 70%, rgba(252, 229, 230, 1) 0%);
 }
+
+
+.montserrat-normal {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.montserrat-write {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat-heavy {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.playwrite-nz-basic {
+  font-family: "Playwrite NZ Basic", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
