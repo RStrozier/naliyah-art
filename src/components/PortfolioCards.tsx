@@ -44,65 +44,73 @@ const PortfolioCards = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-2">
-      {portfolioItems.map((item, index) => (
-        <Card
-          key={index}
-          sx={{
-            width: "100%",
-            maxWidth: 400,
-            height: 500, // Set a fixed height for the card
-            margin: "auto",
-            display: "flex",
-            flexDirection: "column", 
-            justifyContent: "space-between", 
-            boxShadow: 3,
-          }}
-        >
-          <CardActionArea component={Link} to={item.path} sx={{ flexGrow: 1 }}>
-            <CardMedia
-              component="img"
-              image={item.image}
-              sx={{
-                height: 250, // Set a fixed height for the image
-                objectFit: "cover", // Crop the image to fit the area
-              }}
-              alt={item.title}
-            />
-            <CardContent
-              sx={{
-                flexGrow: 1, // Allows the content to grow and fill available space
-                overflow: "hidden", // Prevents content overflow
-              }}
-            >
-              <Typography gutterBottom variant="h5" component="div">
-                {item.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                <div className="sub-color-2">Explore the beauty of {item.title}.</div>
-                <br />
-                <div className="sub-color-1 mx-2">{item.description}</div>
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions
+    <div
+      className="sub-gradient-2 p-8"
+      style={{
+        background: "linear-gradient(195deg, rgba(252, 229, 230, 1) 70%, rgba(255, 252, 246, 1) 0%)",
+      }}
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-2">
+        {portfolioItems.map((item, index) => (
+          <Card
+            key={index}
             sx={{
-              justifyContent: "center", 
-              padding: "16px", 
+              width: "100%",
+              maxWidth: 400,
+              height: 520, // Set a fixed height for the card
+              margin: "auto",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              boxShadow: 3,
             }}
           >
-            <Button
-              component={Link}
-              to={item.path}
-              size="medium"
-              color="primary"
-              className="main-gradient"
+            <CardActionArea component={Link} to={item.path} sx={{ flexGrow: 1 }}>
+              <CardMedia
+                component="img"
+                image={item.image}
+                sx={{
+                  height: 250, // Set a fixed height for the image
+                  objectFit: "cover", // Crop the image to fit the area
+                }}
+                alt={item.title}
+              />
+              <CardContent
+                sx={{
+                  flexGrow: 1, // Allows the content to grow and fill available space
+                  overflow: "hidden", // Prevents content overflow
+                }}
+              >
+                <Typography gutterBottom variant="h5" component="div">
+                  {item.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  <div className="sub-color-2">Explore the beauty of {item.title}.</div>
+                  <br />
+                  <div className="sub-color-1 mx-2">{item.description}</div>
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions
+              sx={{
+                justifyContent: "center",
+                padding: "16px",
+              }}
             >
-              View {item.title} Portfolio
-            </Button>
-          </CardActions>
-        </Card>
-      ))}
+              <Button
+                component={Link}
+                to={item.path}
+                size="large"
+                className="main-gradient"
+              >
+                <div className="p-3 font-semibold sub-color-1">
+                  View {item.title} Portfolio
+                </div>
+              </Button>
+            </CardActions>
+          </Card>
+        ))}
+      </div>
     </div>
   );
 };

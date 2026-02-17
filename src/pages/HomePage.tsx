@@ -11,7 +11,7 @@ function HomePage() {
       <Hero />
       <br />
       <About />
-      <div className="p-4">
+      <div className="p-5">
         <img src={textImage} className="max-w-full sm:max-w-lg mx-auto" 
         alt="Check Out Naliyah's Creative Portfolio" />
       </div>
