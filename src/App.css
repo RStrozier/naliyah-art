@@ -21,3 +21,8 @@ background: linear-gradient(90deg, rgba(252, 229, 230, 1) 0%, rgba(208, 245, 236
 .sub-color-2{
   color: #DF537A
 }
+
+.main-gradient {
+  background: #FCE5E6;
+background: linear-gradient(90deg, rgba(252, 229, 230, 1) 0%, rgba(208, 245, 236, 1) 100%);
+}

@@ -1,7 +1,11 @@
+import BackButton from "../components/buttons/BackButton"
 
 const HennaPage = () => {
   return (
-    <div>HennaPage</div>
+    <>
+      <BackButton />
+      <div>Henna Page</div>
+    </>
   )
 }
 

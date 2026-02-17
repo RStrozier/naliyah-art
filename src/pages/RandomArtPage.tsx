@@ -1,7 +1,11 @@
+import BackButton from "../components/buttons/BackButton"
 
 const RandomArtPage = () => {
   return (
-    <div>DigitalArtPage</div>
+    <>
+     <BackButton />
+         <div>Digital Art Page</div>
+    </>
   )
 }
 
