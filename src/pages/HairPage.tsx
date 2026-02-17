@@ -2,7 +2,6 @@ import nayHair1 from "../assets/hair/Nay-Hair-1.jpg"
 import nayHair2 from "../assets/hair/Nay-Hair-2.jpeg"
 import nayHair3 from "../assets/hair/Nay-Hair-3.jpeg"
 import nayHair4 from "../assets/hair/Nay-Hair-4.jpeg"
-import nayHair5 from "../assets/hair/Nay-Hair-5.jpg"
 import nayHair6 from "../assets/hair/Nay-Hair-6.jpeg"
 import nayHair7 from "../assets/hair/Nay-Hair-7.jpeg"
 import nayHair8 from "../assets/hair/Nay-Hair-8.jpeg"
@@ -21,7 +20,6 @@ const HairPage = () => {
          <img src={nayHair7} alt="Art" className="max-w-xs rounded-lg shadow-md" />
         <img src={nayHair4} alt="Art" className="max-w-xs rounded-lg shadow-md" />
         <img src={nayHair8} alt="Art" className="max-w-xs rounded-lg shadow-md" />
-        <img src={nayHair5} alt="Art" className="max-w-xs rounded-lg shadow-md" />
         <img src={nayHair6} alt="Art" className="max-w-xs rounded-lg shadow-md" />
 
       </div>
