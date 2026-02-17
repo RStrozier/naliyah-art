@@ -44,7 +44,7 @@ const PortfolioCards = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-2">
       {portfolioItems.map((item, index) => (
         <Card
           key={index}
@@ -81,7 +81,7 @@ const PortfolioCards = () => {
               <Typography variant="body2" color="text.secondary">
                 <div className="sub-color-2">Explore the beauty of {item.title}.</div>
                 <br />
-                <div className="sub-color-1">{item.description}</div>
+                <div className="sub-color-1 mx-2">{item.description}</div>
               </Typography>
             </CardContent>
           </CardActionArea>
