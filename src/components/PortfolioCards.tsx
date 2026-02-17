@@ -28,18 +28,18 @@ const PortfolioCards = () => {
         "As a self-taught hair artist, Naliyah went from styling herself, to creatively styling her family and friends.",
     },
     {
-      path: "/henna",
-      title: "Henna",
-      image: nayHenna1,
-      description:
-        "Wanting to translate art from paper to skin, Naliyah began with a Henna kit to take her art from 2D to 3D.",
-    },
-    {
       path: "/random",
       title: "Random",
       image: nayRandom1,
       description:
         "Whether writing poems, designing shoes, or building legos. There is no shortage of art.",
+    },
+     {
+      path: "/henna",
+      title: "Henna",
+      image: nayHenna1,
+      description:
+        "Wanting to translate art from paper to skin, Naliyah began with a Henna kit to take her art from 2D to 3D.",
     },
   ];
 
